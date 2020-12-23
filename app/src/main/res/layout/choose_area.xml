@@ -29,6 +29,27 @@
             android:background="@drawable/back" />
     </RelativeLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+        <EditText
+            android:id="@+id/edt_input"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:hint="请输入城市编码"
+            android:textSize="20dp"
+            android:background="#fff"/>
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交查询"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"

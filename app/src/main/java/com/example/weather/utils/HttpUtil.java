@@ -4,7 +4,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
 public class HttpUtil {
-
     /*
     发起HTTP请求，传入请求地址，注册回调
      */

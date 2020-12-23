@@ -17,10 +17,13 @@ public class Utility {
      * 解析服务器返回的省级数据
      */
     public static boolean handleProvinceResponse(String response) {
+        //字符串不为空
         if (!TextUtils.isEmpty(response)) {
             try {
+                //转成Json格式的字符串
                 JSONArray allProvinces = new JSONArray(response);
                 for (int i = 0; i < allProvinces.length(); i++) {
+                    //获取一个Json对象，并用province中的函数将Json对象中的元素存入province相应位置
                     JSONObject provinceObject = allProvinces.getJSONObject(i);
                     Province province = new Province();
                     province.setProvinceName(provinceObject.getString("name"));
@@ -89,6 +92,7 @@ public class Utility {
             JSONObject jsonObject = new JSONObject(response);
             JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
             String weatherContent = jsonArray.getJSONObject(0).toString();
+            //通过fromJson将Json数据转化为Weather对象
             return new Gson().fromJson(weatherContent,Weather.class);
         }catch (Exception e){
             e.printStackTrace();

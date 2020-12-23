@@ -1,25 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="15dp">
 
-    <TextView
-        android:id="@+id/degree_text"
+    <Button
+        android:id="@+id/add_fav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
+        android:text="添加关注"
         android:textColor="#fff"
-        android:textSize="60sp"/>
+        android:layout_marginTop="20dp"
+        android:background="#8000"/>
 
-    <TextView
-        android:id="@+id/weather_info_text"
+    <Button
+        android:id="@+id/my_fav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
+        android:text="我的关注"
         android:textColor="#fff"
-        android:textSize="20sp"/>
+        android:layout_marginTop="20dp"
+        android:background="#8000"
+        android:layout_below="@+id/add_fav"/>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/cancel_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消关注"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:background="#8000"
+        android:layout_below="@+id/my_fav"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/add_fav"
+        android:layout_marginLeft="120dp">
+
+        <TextView
+            android:id="@+id/degree_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textColor="#fff"
+            android:layout_marginRight="10dp"
+            android:textSize="60sp"/>
+
+        <TextView
+            android:id="@+id/weather_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/degree_text"
+            android:layout_marginLeft="80dp"
+            android:layout_gravity="end"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
